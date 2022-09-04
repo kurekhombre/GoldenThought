@@ -6,7 +6,7 @@ Homework from the Python Course
 
 Simple random fetch from database with link to author's wikipedia AND another possibility - fetch from RapidAPI
 
-## HOW TO
+## Setup
 
 - ``` git clone https://github.com/kurekhombre/GoldenThought.git ```
 - Create virtual environment ```python3 -m venv venv``` and activate it
