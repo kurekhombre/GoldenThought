@@ -1,5 +1,7 @@
 # GoldenThought
 
+![Alt text](/golden_thought_ss.png?raw=true "Golden Thought")
+
 Homework from the Python Course
 
 Simple random fetch from database with link to author's wikipedia AND another possibility - fetch from RapidAPI
