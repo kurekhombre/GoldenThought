@@ -1,0 +1,22 @@
+
+{% extends 'randomthought/layout.html' %}
+
+
+{% block content %}
+
+
+<main class="px-3">
+  {% if thought %}
+    <form method="POST">{% csrf_token %}
+    <h2>Usuwanie cytatu</h2>
+    <p>Czy na pewno chcesz usunąć cytat "{{ thought.thought }}" ?</p>
+    <button class="btn btn-success">Usuń</button>
+
+    </form>
+    <a href="{% url 'thought:view-thoughts' %}"><button class="btn btn-danger">Anuluj</button></a>
+  {% endif %}
+
+</main>
+
+
+{% endblock content %}

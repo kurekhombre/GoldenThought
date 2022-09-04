@@ -1,0 +1,13 @@
+{% extends 'randomthought/layout.html' %}
+{% block nav %}
+{% endblock nav %}
+
+{% block content %}
+
+{% if thought %}
+  <main class="px-3">
+    <h3>{{ thought.thought }}</h3>
+    <h2><a href="{{ thought.get_author_url }}">{{ thought.author }}</a></h2>
+  </main>
+{% endif %}
+{% endblock content %}

@@ -1,0 +1,22 @@
+{% extends 'randomthought/layout.html' %}
+{% block nav %}
+{% endblock nav %}
+
+{% block content %}
+
+
+  <main class="px-3">
+    {% for thought in thoughts %}
+    <div class="card">
+    <h6><a class="nav-link" aria-current="page" href="{% url 'thought:detail-thought-view' thought.id %}"><i style="color: black">{{ thought.id }}</i></a>
+        <a class="nav-link" aria-current="page" href="{% url 'thought:update-thought-view' thought.id %}"><i style="color: gold">Edit</i></a>
+        <a class="nav-link" aria-current="page" href="{% url 'thought:delete-thought-view' thought.id %}"><i style="color: red">Delete</i></a>
+    </h6>
+    <h4>{{ thought.thought }}</h4>
+    <h5><a href="{{ thought.get_author_url }}">{{ thought.author }}</a></h5>
+    <br>
+    </div>
+    {% endfor %}
+  </main>
+
+{% endblock content %}

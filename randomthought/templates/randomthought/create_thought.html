@@ -1,0 +1,22 @@
+
+{% extends 'randomthought/layout.html' %}
+
+
+{% block content %}
+
+
+<main class="px-3">
+  {% if thought %}
+    <h2>Zmodyfikuj zadanie</h2>
+  {% else %}
+    <h2>Zarejestruj zadanie</h2>
+  {% endif %}
+<form method="POST">{% csrf_token %}
+    {{ form.as_p }}
+    <input class ="btn btn-primary" type="submit" value="Zapisz">
+
+</form>
+</main>
+
+
+{% endblock content %}
